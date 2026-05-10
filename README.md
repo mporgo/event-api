@@ -207,10 +207,3 @@ event-api/
 ├── .env.example
 └── README.md
 ```
-
----
-
-## 👨‍💻 Auteur
-
-**PORGO** — ESI / Université Nazi Boni  
-Licence 3 — Ingénierie des Systèmes d'Information
