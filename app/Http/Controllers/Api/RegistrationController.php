@@ -63,8 +63,9 @@ class RegistrationController extends Controller
             'first_name'    => $request->firstName,
             'last_name'     => $request->lastName,
             'email'         => $request->email,
-            'registered_at' => now()->format('Y-m-d\TH:i:s\Z'),
         ]);
+
+        $registration->refresh();
 
         return response()->json([
             'id'           => $registration->id,
@@ -72,7 +73,8 @@ class RegistrationController extends Controller
             'firstName'    => $registration->first_name,
             'lastName'     => $registration->last_name,
             'email'        => $registration->email,
-            'registeredAt' => $registration->registered_at,
+            'registeredAt' => \Carbon\Carbon::parse($registration->registered_at)
+                        ->format('Y-m-d\TH:i:s\Z'),
         ], 201);
     }
 
@@ -93,7 +95,7 @@ class RegistrationController extends Controller
             'firstName'    => $r->first_name,
             'lastName'     => $r->last_name,
             'email'        => $r->email,
-            'registeredAt' => $r->registered_at,
+            'registeredAt' => \Carbon\Carbon::parse($r->registered_at)->format('Y-m-d\TH:i:s\Z'),
         ]);
 
         return response()->json($registrations, 200);

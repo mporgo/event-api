@@ -200,8 +200,8 @@ event-api/
 │       ├── Event.php
 │       └── Registration.php
 ├── database/migrations/
-│   ├── xxxx_create_events_table.php
-│   └── xxxx_create_registrations_table.php
+│   ├── 2026_05_10_091015_create_events_table.php
+│   └── 2026_05_10_091210_create_registrations_table.php
 ├── routes/
 │   └── api.php
 ├── .env.example
