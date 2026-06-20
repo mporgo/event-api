@@ -1,0 +1,23 @@
+name: event_mobile
+description: Application mobile de gestion d'événements
+
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  dio: ^5.4.0              # Requêtes HTTP
+  intl: ^0.18.1            # Formatage des dates
+  go_router: ^13.0.0       # Navigation déclarative
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
